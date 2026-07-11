@@ -1,0 +1,53 @@
+# --- IDE / Editors ---
+.vscode/
+.idea/
+*.swp
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Node ---
+node_modules/
+.next/
+out/
+.npm/
+
+# --- Logs ---
+*.log
+
+# --- Env files ---
+.env
+.env.*
+!.env.example
+
+# --- Build outputs ---
+out/
+dist/
+build/
+
+# --- TypeScript ---
+*.tsbuildinfo
+
+# --- Backend ---
+backend/node_modules/
+backend/dist/
+backend/.env
+
+# --- Frontend / Next ---
+frontend/website/.next/
+frontend/website/out/
+
+# --- Mobile / Android / Gradle ---
+frontend/mobile/.gradle/
+frontend/mobile/**/build/
+frontend/mobile2/**/build/
+frontend/mobile2/android/.gradle/
+
+# --- Uploads / Generated ---
+screenshots/
+
+# --- Misc ---
+*.pid
+*.seed
+

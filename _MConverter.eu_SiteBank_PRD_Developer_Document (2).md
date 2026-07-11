@@ -1,0 +1,442 @@
+**SITEBANK**
+
+**Product Requirements Document (PRD)**
+
+AI-powered real estate property organization, smart sharing, trust and lead intelligence platform
+
+------------------------------------------------------------------------
+
+| **Field** | **Details** |
+|----|----|
+| Product Name | SiteBank (earlier working name: SiteBook / SideBook) |
+| Prepared For | Developer / Product Team |
+| Prepared By | RK Digital Media |
+| Version | 1.0 |
+| Date | 04 May 2026 |
+| Primary Market | India - real estate agents, brokers, agencies, site owners and real estate enterprises |
+| Core Promise | Store property details once, share a smart link instantly, track buyer interest, and help agents close deals faster. |
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th><p><strong>One-line product vision</strong></p>
+<blockquote>
+<p>• Make the unorganized real estate workflow professional, searchable, trustworthy and faster for agents who currently depend on WhatsApp, gallery, notes and memory.</p>
+</blockquote></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+# 1. Executive Summary {#executive-summary}
+
+SiteBank is an AI-powered property organization and smart sharing platform built for real estate agents and agencies. The platform allows agents to add property details, upload media, generate a smart property link, share it through WhatsApp, track client views, and receive hot lead alerts based on buyer activity.
+
+The system should be simple enough for less tech-savvy agents, but professional enough for real estate companies and enterprise brokers. The main product goal is not to become another public marketplace like listing portals. SiteBank is an agent-owned workspace and buyer-facing microsite system that helps agents organize property information and close deals faster.
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th><p><strong>Latest requested feature addition</strong></p>
+<blockquote>
+<p>• After the agent enters property details and uploads images, the platform should generate a ready-to-share AI thumbnail/poster based on the property details and selected images.</p>
+<p>• This thumbnail should help agents share properties professionally on WhatsApp, Instagram stories, statuses and client groups without needing a designer.</p>
+</blockquote></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+# 2. Problem Statement {#problem-statement}
+
+- Real estate agents store property data in WhatsApp chats, phone gallery, notebooks, Excel sheets and memory.
+
+- When a buyer asks for details, agents manually search for photos, location, price, layout details and nearby facilities.
+
+- Buyers often receive incomplete information and ask repeated questions before taking interest seriously.
+
+- Agents do not know which buyer opened, viewed or revisited a property after receiving details.
+
+- Bigger agencies worry about team coordination, data leakage, duplicate follow-up and lack of visibility into agent performance.
+
+- NRIs and serious buyers need more trust signals like verified documents, nearby insights and clear location-based explanation.
+
+# 3. Product Goals {#product-goals}
+
+| **Goal** | **Description** | **Success Signal** |
+|----|----|----|
+| Organize Properties | Agents can store all photos, videos, maps, details, documents and notes in one structured profile. | Agent adds property in under 5 minutes. |
+| Share Faster | Generate one smart property link instead of sending 20 separate WhatsApp messages. | More shares per property. |
+| Improve Buyer Clarity | Buyer sees location, media, amenities, nearby places, AI explanation and contact CTA in one page. | Fewer repeated questions. |
+| Track Buyer Interest | Agent can see views, repeat visits, hot leads and WhatsApp CTA clicks. | More follow-ups from warm leads. |
+| Build Trust | Optional verification badge based on documents/admin review. | Higher trust for premium/NRI clients. |
+| Close Deals Faster | Hot lead alerts, follow-up reminders, AI pitch assistant and urgency triggers. | Increase in site visits/bookings. |
+
+# 4. Target Users {#target-users}
+
+| **User Type** | **Needs** | **Key Features** |
+|----|----|----|
+| Individual Agent | Organize property data and share quickly. | Add property, smart link, thumbnails, view tracking, reminders. |
+| Real Estate Agency | Manage multiple agents and properties. | Team dashboard, roles, lead assignment, performance reports. |
+| Enterprise Broker / Developer | Branded workspace and data control. | White-label option, custom domain, admin roles, verification workflow. |
+| Property Owner | Store and share property details professionally. | Owner listing, smart link, inquiry tracking. |
+| Buyer / Client | Understand property clearly before visiting. | Buyer microsite, AI location assistant, contact CTA, documents if public. |
+| Admin / SiteBank Team | Manage platform, verification and billing. | Admin panel, subscriptions, content moderation, analytics. |
+
+# 5. Core Product Positioning {#core-product-positioning}
+
+SiteBank is not a public real estate marketplace. It is a private operating system for real estate agents and companies.
+
+| **Not This** | **Instead This** |
+|----|----|
+| Not another OLX/MagicBricks-style public listing portal. | Agent-owned property workspace and client sharing system. |
+| Not only CRM. | Property database + smart microsite + AI assistant + lead intelligence. |
+| Not only storage. | Organized information that helps buyers understand and agents close faster. |
+| Not only for educated agents. | Voice-first, guided, simple workflow for all agent types. |
+
+# 6. Main User Flow {#main-user-flow}
+
+1.  Agent signs up or logs in using mobile number/email/Google login.
+
+2.  Agent creates personal/company profile with logo, contact number, WhatsApp number and location.
+
+3.  Agent taps Add Property.
+
+4.  Agent enters property category, location, price, dimensions, facing, approvals, amenities and notes.
+
+5.  Agent uploads property photos, short video and optional documents.
+
+6.  Agent uses AI help to auto-generate title, description, location highlights and buyer-facing explanation.
+
+7.  Agent generates AI thumbnail/poster from property details and selected images.
+
+8.  Agent previews buyer microsite/smart link.
+
+9.  Agent shares the smart link on WhatsApp, Instagram, SMS or copies link.
+
+10. Buyer opens link, sees all details, AI location assistant, media, CTA and enquiry button.
+
+11. Agent receives view alert, repeat-view alert, hot lead score and follow-up suggestion.
+
+12. Agent follows up using AI pitch or WhatsApp message template and tracks deal progress.
+
+# 7. Feature Requirements {#feature-requirements}
+
+## 7.1 Authentication & Roles {#authentication-roles}
+
+| **Feature** | **Requirement** | **Priority** |
+|----|----|----|
+| Sign Up / Login | Mobile OTP, email/password and Google login options. Mobile OTP can be phase 2 if budget is limited. | P0 |
+| Roles | Super Admin, Agency Admin, Agent, Property Owner, Buyer/Public Viewer. | P0 |
+| Profile Setup | Name, phone, WhatsApp number, company name, logo, profile photo, office location, RERA/license optional. | P0 |
+| Team Management | Agency Admin can add/remove agents and view their properties/leads. | P1 |
+
+## 7.2 Property Management {#property-management}
+
+| **Field Group** | **Fields / Capabilities** | **Priority** |
+|----|----|----|
+| Basic Details | Property title, property type, transaction type, price, negotiable flag, ownership type. | P0 |
+| Location | Map pin, full address, village/area, city, district, state, landmark, approach road. | P0 |
+| Property Specs | Plot size, built-up area, facing, dimensions, road width, floors, bedrooms, bathrooms, parking, age of property. | P0 |
+| Approvals | RERA, LP number, HMDA/VUDA/DTCP or local authority status, bank loan availability, encumbrance info. | P1 |
+| Amenities | Water, electricity, drainage, compound wall, borewell, gated community, security, clubhouse, school nearby. | P0 |
+| Media | Upload photos, cover image, video up to configured limit, reorder media, delete media. | P0 |
+| Documents | Optional EC, layout approval, sale deed sample, tax receipt, brochure. Visibility can be private/public/request-only. | P1 |
+| Internal Notes | Agent-only notes such as owner expectation, commission, negotiation range, urgency, contact history. | P1 |
+
+## 7.3 AI-assisted Property Entry {#ai-assisted-property-entry}
+
+- AI should convert rough agent notes into a clean property title and description.
+
+- AI should suggest missing fields based on property type.
+
+- AI should generate location highlights using agent-provided data and approved source data only.
+
+- AI should support simple English and Telugu/Tinglish-style prompts for agents.
+
+- Voice input should be considered for phase 2, because many agents may prefer speaking instead of typing.
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th><p><strong>AI reliability rule</strong></p>
+<blockquote>
+<p>• AI should never invent facilities, distances, approvals or legal information. If data is not available, show “Not provided” or ask the agent to confirm.</p>
+<p>• For nearby facilities, prefer verified map/location data integrations in future versions. For MVP, use agent-entered nearby places and clearly mark them as agent-provided.</p>
+</blockquote></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+## 7.4 Smart Property Link / Buyer Microsite {#smart-property-link-buyer-microsite}
+
+| **Section** | **Buyer-facing Requirement** | **Priority** |
+|----|----|----|
+| Hero | Generated thumbnail/cover, title, location, price, key specs and contact CTA. | P0 |
+| Media Gallery | Photos, video, full-screen view. | P0 |
+| Location Block | Map, landmark, route/open in maps, nearby highlights. | P0 |
+| Property Details | Structured cards for size, facing, approvals, amenities, documents availability. | P0 |
+| AI Property Assistant | Buyer can ask questions based only on available property details and approved nearby information. | P1 |
+| Contact CTA | Call, WhatsApp, request site visit, ask for more details. | P0 |
+| Trust Layer | Verified badge, document availability, admin verified note if applicable. | P1 |
+| Share Controls | Buyer can forward link; agent can disable/expire link if needed. | P2 |
+
+## 7.5 AI Thumbnail / Poster Generation - New Feature {#ai-thumbnail-poster-generation---new-feature}
+
+After entering all property details and uploading images, the agent should be able to generate a professional property thumbnail/poster automatically. This will make every property look branded, clear and shareable without needing manual design work.
+
+| **Requirement** | **Details** | **Priority** |
+|----|----|----|
+| Input Data | Property title, price, location, property type, key specs, cover image, agent/company logo, contact number. | P0 |
+| Image Selection | Agent can select one cover image or let system auto-pick best image based on clarity and aspect ratio. | P0 |
+| Template Options | Minimum 3 templates: Premium, Fast Sale/Hot Property, Simple WhatsApp Share. | P0 |
+| Auto Text Overlay | Display title, price, location, plot/area size, key highlight, contact CTA and SiteBank branding. | P0 |
+| Aspect Ratios | Generate 16:9 link thumbnail, 1:1 square post, and 9:16 WhatsApp/Instagram status. | P1 |
+| Branding | For free/basic plans show "Made with SiteBank"; paid plans allow agency logo and custom branding. | P1 |
+| Edit Before Download | Agent can edit headline, price display, key highlight and choose image crop. | P1 |
+| Regenerate | Agent can regenerate design with different template/background if not satisfied. | P1 |
+| Save to Property | Generated thumbnail becomes smart link preview image and can be downloaded/shared. | P0 |
+| Compliance | No fake claims like "approved" or "verified" unless the corresponding field is actually verified. | P0 |
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th><p><strong>Thumbnail generation logic</strong></p>
+<blockquote>
+<p>• Use rule-based templates for MVP to reduce cost and ensure consistent output.</p>
+<p>• AI can generate headline and key selling text; design layout can be template-based using canvas/server-side rendering.</p>
+<p>• Later versions can use generative image models for luxury backgrounds, but actual property image must remain truthful and not misleading.</p>
+</blockquote></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+## 7.6 Lead Tracking & Analytics {#lead-tracking-analytics}
+
+| **Feature** | **Requirement** | **Priority** |
+|----|----|----|
+| View Count | Track total views per property link. | P0 |
+| Unique Visitors | Estimate unique viewers using browser/session/device fingerprint where legally acceptable. | P1 |
+| Repeat Views | Alert agent when the same buyer opens property multiple times. | P1 |
+| WhatsApp Clicks | Track CTA clicks on WhatsApp/contact buttons. | P0 |
+| Source Tracking | Track share source if agent shares with campaign/link tags. | P2 |
+| Hot Lead Score | Score buyer interest based on repeated views, CTA clicks, document views, map opens and time spent. | P1 |
+| Daily Report | Agent dashboard shows top viewed properties and hot buyers. | P1 |
+
+## 7.7 Close Deals Faster Features {#close-deals-faster-features}
+
+| **Feature** | **How It Helps Closing** | **Priority** |
+|----|----|----|
+| Hot Lead Alerts | Notify agent when a buyer shows strong interest so follow-up happens immediately. | P1 |
+| Follow-up Reminders | Set reminder after sharing link; show pending follow-ups. | P1 |
+| AI Pitch Assistant | Generate WhatsApp follow-up message based on property, buyer interest and urgency. | P1 |
+| Urgency Triggers | Mark property as hot, limited plots, price change, owner urgent, site visit slots available. | P2 |
+| Buyer Q&A Automation | Buyer can ask questions on the microsite; AI answers from available property data. | P1 |
+| Lead Prioritization | Show which buyers/properties need attention first. | P1 |
+| Site Visit Scheduler | Buyer can request site visit date/time; agent confirms manually. | P2 |
+
+## 7.8 Trust, Verification & Data Safety {#trust-verification-data-safety}
+
+| **Area** | **Requirement** | **Priority** |
+|----|----|----|
+| Document Upload | Agents can upload property documents privately. | P1 |
+| Visibility Control | Documents can be private, public, or visible on request. | P1 |
+| Verification Badge | Admin can verify property documents and mark property as verified. | P1 |
+| Data Ownership | Clearly state that property data belongs to the agent/company, not SiteBank. | P0 |
+| Private Workspace | Properties are not publicly listed unless the user chooses to share link. | P0 |
+| Access Control | Agency admin can define who can view/edit/delete/download leads and properties. | P1 |
+| Audit Logs | Record who created/edited/deleted/shared a property. | P2 |
+| Export Option | Paid users can export their property data for trust and transparency. | P2 |
+
+## 7.9 Leaderboard & Referral System {#leaderboard-referral-system}
+
+| **Feature** | **Requirement** | **Priority** |
+|----|----|----|
+| Weekly Leaderboard | Rank agents based on useful activity: properties added, verified listings, link shares, hot leads, site visits, conversions if tracked. | P2 |
+| Reward | Weekly top leader can get selected premium features unlocked for one week instead of cash reward. | P2 |
+| Referral Code | Each agent gets referral code/link to invite other agents. | P2 |
+| Referral Reward | Unlock extra thumbnails, extra property slots, premium analytics trial or verification discount. | P2 |
+| Anti-spam | Do not reward fake shares/views. Use meaningful actions and admin checks. | P2 |
+
+## 7.10 Subscription & Limits {#subscription-limits}
+
+| **Plan** | **Suitable For** | **Suggested Limits / Features** |
+|----|----|----|
+| Free / Trial | New agents testing product | Limited properties, SiteBank branding, basic smart links, basic thumbnails. |
+| Basic Agent | Individual agent | More properties, link analytics, template thumbnails, WhatsApp share, basic AI writing. |
+| Pro Agent | High-performing agent | Hot lead alerts, AI pitch assistant, more media, premium templates, priority support. |
+| Agency | Small/medium real estate office | Multiple agents, team dashboard, lead assignment, performance analytics. |
+| Enterprise / White-label | Large brokers/developers | Custom branding, custom domain, roles, verification workflow, API/export, onboarding support. |
+
+# 8. Admin Panel Requirements {#admin-panel-requirements}
+
+| **Module** | **Admin Capabilities** | **Priority** |
+|----|----|----|
+| Users | View, search, activate/suspend users and agencies. | P0 |
+| Properties | View flagged listings, verify details, approve/reject verification. | P1 |
+| Subscriptions | Manage plans, billing status, limits and coupons. | P1 |
+| Thumbnails | Manage templates, branding rules and generated assets. | P1 |
+| Reports | Platform usage, active agents, properties added, top areas, storage usage. | P1 |
+| Support | View user complaints and support tickets. | P2 |
+
+# 9. Data Model - Suggested Collections / Tables {#data-model---suggested-collections-tables}
+
+| **Table / Collection** | **Important Fields** |
+|----|----|
+| users | id, name, email, phone, role, profile_photo, created_at, status |
+| agencies | id, name, logo, owner_user_id, address, plan_id, custom_domain, branding_settings |
+| properties | id, owner_user_id, agency_id, title, type, price, location, specs_json, approvals_json, status, verification_status |
+| property_media | id, property_id, file_url, file_type, order, is_cover, size, created_at |
+| property_documents | id, property_id, file_url, doc_type, visibility, verification_status |
+| smart_links | id, property_id, slug, status, expiry, share_source, created_at |
+| link_events | id, smart_link_id, event_type, session_id, ip_hash, device_hash, referrer, created_at |
+| leads | id, property_id, agent_id, name, phone, source, score, status, last_activity_at |
+| thumbnail_assets | id, property_id, template_id, image_url, aspect_ratio, headline, generated_by, created_at |
+| subscriptions | id, user_id/agency_id, plan, limits_json, start_date, end_date, payment_status |
+| referrals | id, referrer_user_id, referred_user_id, code, reward_status |
+| audit_logs | id, actor_user_id, action, entity_type, entity_id, created_at |
+
+# 10. AI Modules {#ai-modules}
+
+| **AI Module** | **Input** | **Output** | **Guardrails** |
+|----|----|----|----|
+| Property Description Generator | Agent rough notes + fields | Clean title, description, highlights | No fake approvals or facilities. |
+| Location Explanation Assistant | Agent-provided nearby info + approved map data | Buyer-friendly explanation | Mention source/uncertainty. |
+| Buyer Q&A Assistant | Property profile data | Answers buyer questions | Answer only from available data. |
+| Follow-up Message Generator | Lead activity + property details | WhatsApp-ready message | No false urgency. |
+| Thumbnail Copy Generator | Property type, location, price, specs | Headline/key highlight/CTA | Truthful text only. |
+
+# 11. Non-functional Requirements {#non-functional-requirements}
+
+| **Category** | **Requirement** |
+|----|----|
+| Performance | Buyer smart link should load quickly on mobile networks. Optimize media thumbnails and lazy-load galleries. |
+| Mobile-first | Agent and buyer interfaces must be optimized for mobile usage. |
+| Storage Control | Video size limits recommended for MVP: 50 MB and 30-60 seconds. Higher quality can be paid plan feature. |
+| Security | Use secure authentication, encrypted file URLs where needed, role-based access and audit logs. |
+| Privacy | Do not expose private agent documents or owner details in public link unless explicitly enabled. |
+| Scalability | Separate media storage from database. Use CDN/object storage for images/videos. |
+| Localization | English first; Telugu/Tinglish support in AI prompts and generated descriptions later. |
+| Reliability | Backups for database and media; error logging and admin monitoring. |
+
+# 12. MVP Scope {#mvp-scope}
+
+| **MVP Must-have (P0)** | **Later (P1/P2)** |
+|----|----|
+| Agent login/profile | Team management and enterprise white-label |
+| Add/edit/delete property | Verification workflow and document review |
+| Upload photos and limited video | Advanced media compression and CDN variants |
+| Generate smart property link | Buyer AI Q&A assistant |
+| Basic buyer microsite | Hot lead scoring and advanced analytics |
+| View count and WhatsApp CTA tracking | Site visit scheduler |
+| AI description/title helper | Voice input for agents |
+| AI thumbnail generation using templates | Generative luxury poster backgrounds |
+| Basic subscription limits | Referral rewards and weekly leaderboard |
+
+# 13. Developer Acceptance Criteria {#developer-acceptance-criteria}
+
+- Agent can create account, complete profile and add property successfully.
+
+- Agent can upload at least 10 property photos and one limited-size video.
+
+- System generates a public smart link that opens without login for buyers.
+
+- Buyer page shows title, price, location, photos, specs, amenities, map CTA and contact CTA.
+
+- Agent can generate at least one thumbnail/poster after entering property details and selecting image.
+
+- Generated thumbnail is saved to property and appears as smart link preview/cover image.
+
+- Agent dashboard shows basic property views and WhatsApp/contact clicks.
+
+- System prevents unverified legal/approval claims from being shown as verified.
+
+- Private notes and private documents are never visible on public buyer link.
+
+- Admin can view users, properties and generated thumbnails.
+
+# 14. Suggested Tech Stack {#suggested-tech-stack}
+
+| **Layer** | **Recommended Options** |
+|----|----|
+| Frontend | React / Next.js / Flutter Web depending on developer preference. Mobile-first PWA recommended for MVP. |
+| Backend | Node.js/NestJS or FastAPI. REST APIs are enough for MVP. |
+| Database | PostgreSQL/Supabase or MongoDB. PostgreSQL preferred for structured property and analytics data. |
+| Storage | Supabase Storage, S3-compatible object storage, Cloudflare R2 or Firebase Storage. |
+| AI | LLM API for description/copy/Q&A; template-based thumbnail renderer for MVP. |
+| Thumbnail Rendering | HTML/CSS to image, Canvas, Playwright screenshot service, or server-side image library. |
+| Analytics | Custom event tracking table for smart link events. |
+| Notifications | Email/WhatsApp integration later; in-app notifications for MVP. |
+
+# 15. Open Decisions for Founder / Developer {#open-decisions-for-founder-developer}
+
+- Finalize product name: SiteBank vs SiteBook. This document uses SiteBank as current product name, with SiteBook noted as old working name.
+
+- Finalize first launch platform: mobile-first web app/PWA is recommended before native Play Store app.
+
+- Decide whether buyer AI assistant is MVP or phase 2. Thumbnail generation should be included in MVP because it is a strong visual sharing feature.
+
+- Finalize subscription limits: number of properties, media storage, generated thumbnails and team members per plan.
+
+- Decide who performs document verification: SiteBank admin team, agency admin, or external legal partner.
+
+# 16. Developer Notes {#developer-notes}
+
+<table>
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr>
+<th><p><strong>Build philosophy</strong></p>
+<blockquote>
+<p>• Keep agent flow extremely simple: Add property -&gt; Generate smart link -&gt; Generate thumbnail -&gt; Share -&gt; Track leads.</p>
+<p>• Do not overbuild marketplace features in MVP. The main difference is private property organization and smart sharing.</p>
+<p>• Make all screens mobile-first because most agents will use this during field visits.</p>
+<p>• Every feature should support the closing goal: faster follow-up, better buyer clarity and more trust.</p>
+</blockquote></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+# 17. Final MVP Feature Checklist {#final-mvp-feature-checklist}
+
+**☐** Authentication and agent/company profile
+
+**☐** Property CRUD with structured fields
+
+**☐** Photo/video upload with cover image
+
+**☐** AI title/description helper
+
+**☐** AI thumbnail/poster generator
+
+**☐** Smart property link / buyer microsite
+
+**☐** WhatsApp share and contact CTA
+
+**☐** Basic view and CTA analytics
+
+**☐** Admin panel
+
+**☐** Subscription limits foundation
